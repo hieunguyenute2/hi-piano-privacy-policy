@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Hi Piano</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background-color: #2c3e50;
+            color: #fff;
+            border-color: #2c3e50;
+        }
+
+        .lang-btn:hover {
+            border-color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+        }
+
+        .sidebar {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            padding: 8px 0;
+            border-left: 2px solid transparent;
+            padding-left: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            color: #e74c3c;
+            border-left-color: #e74c3c;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .definition {
+            background-color: #f5f5f5;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            border-left: 3px solid #e74c3c;
+            border-radius: 2px;
+        }
+
+        .definition strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .highlight-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+<script type="text/javascript" nonce="1940e1f81cef4a9f9f7699451ca" src="//local.adguard.org?ts=1769468983615&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2Ff944be0938074e928fd1329d412e8c5a%2Facd69365-2d65-47b8-8c37-8de3d8a02565%2F0d57c958.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253Dhipiano_privacy.html%253B%2520filename%252A%253DUTF-8%2527%2527hipiano_privacy.html%26AWSAccessKeyId%3DASIA2F3EMEYEUI2JFJK7%26Signature%3D6RxhwsKlnCo7lJpVX1B9CSFoQ9Y%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEH8aCXVzLWVhc3QtMSJHMEUCIQCVmzH9KEabKzo6RkSfaEZEgs27HAqvm3DSfkNMsDMEYAIgWIrsqAxl1LuUJbk%252Fx2tFwP4ez%252Bv67IJdKjJtGbc2Vtsq8wQISBABGgw2OTk3NTMzMDk3MDUiDCWoKVJU3L3CTFsNdSrQBPZEin9Paq1J98UMaETL6C4sdFjrGb4Ys9J%252BNDwvZJzBXogSZnXDGvJp80cc4ilW3%252FqzTsQUgljAfmuWs%252BT%252BEr9hwSPaTpqs0BkXm2eoG6dA539CO%252FsfVKFqHOkj8mWsDzVR1pEVTKIEvkn7SwjYFozz%252Bjsgc4ZaNrcIDJ7MZiPOxITVV6c9YjxICvl%252BpuLeik5%252BIy5WHRA%252Bu0mDhJZ6HZFkgnb9OyfQnoVJLz4n6hIfY%252B8L4DKCHhVkV8O2Tt4JsoQrU3DstPLoMAeImrfLqrHdwd4GS7ZA6Q%252Fw4kpwitLNT76mUSnInp7LEWj6wgcuLGi1kVHfz5G8CoOn4fQBbr5AqZhWx2VGr6r9EBsQDRwSF65G0ktHBMcsgueS3YIL9%252BeMmsLZqfAEXxCvR0R7hNB2ncSwkwAGqnIPR%252BQsMOT0O4Q5qnlJulhPcHSju0H3R2EH62xw6el00DEVX0TZnQWhR2vL1Tm6NeXw%252BGLlVXf2emE0njzjGtr%252BZGRQyPo8FZx%252Fh7OgBl8Lk29l1OB0Y20FL%252BR3slDdrqsixfeffQEVj5OdswxbiBuqnfrjXWskTy%252FNE7F%252FzZ1%252BTdpqDe1BQydoK%252Bm6W6CkT4Wumk4wHr7Wa1UcIZ%252FLDfD78w9pc%252Bs0e1ZQfxH4GqKr3YkhY47OJavRj5EOqMgAeGaQV1AxceRXPDlDy4zWIIkyozWvZfoeJFh5lk%252BkW%252BoVZe%252F3xVzfQIDG0%252Bna3IU536bYo9%252F%252FiQDk%252BlHYqqeHZ6fK%252BP0F%252B7lw9tjTAdBNNRywp1vQ2HoTNJswu9zfywY6mAHegkCJueDU60GGRnIiDRsIQbP%252FvNdK45gbxc25Htdw3C1aIUc%252B%252F5nSFS638diY0riKZy%252BJ1rCH9mBsFe%252BYcaQrjDAEPwBqulwj3RpnJjNyTk3KsLlmZX7EFhXv%252BFylLvFSS%252BaVAvHzMv4zboKZv%252FlanDztOOhFWU%252Ba2gCdcr2jUFKlp0QJMGUcjELgafhLKtdtcRWXwkMFUQ%253D%253D%26Expires%3D1769470230&amp;app=ai.perplexity.comet&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-ua=TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2&amp;st-ch-brands=W3siYnJhbmQiOiJHb29nbGUgQ2hyb21lIiwidmVyc2lvbiI6IjE0MyJ9LCB7ImJyYW5kIjoiQ2hyb21pdW0iLCJ2ZXJzaW9uIjoiMTQzIn0sIHsiYnJhbmQiOiJOb3QgQShCcmFuZCIsInZlcnNpb24iOiIyNCJ9XQ==&amp;st-ch-mobile=ZmFsc2U=&amp;st-ch-platform=bWFjT1M=&amp;st-push&amp;st-loc&amp;st-java&amp;st-dnt"></script><script type="text/javascript" nonce="1940e1f81cef4a9f9f7699451ca" src="//local.adguard.org?ts=1769468983615&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Hi Piano</div>
+            <div class="language-toggle">
+                <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn" onclick="switchLanguage('vi')">Tiếng Việt</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3><span class="en">Contents</span><span class="vi hidden">Mục lục</span></h3>
+            <ul>
+                <li><a href="#introduction" onclick="scrollToSection(event)">
+                    <span class="en">Introduction</span>
+                    <span class="vi hidden">Giới thiệu</span>
+                </a></li>
+                <li><a href="#definitions" onclick="scrollToSection(event)">
+                    <span class="en">Definitions</span>
+                    <span class="vi hidden">Định nghĩa</span>
+                </a></li>
+                <li><a href="#data-collection" onclick="scrollToSection(event)">
+                    <span class="en">Data Collection</span>
+                    <span class="vi hidden">Thu thập dữ liệu</span>
+                </a></li>
+                <li><a href="#data-use" onclick="scrollToSection(event)">
+                    <span class="en">Use of Your Data</span>
+                    <span class="vi hidden">Sử dụng dữ liệu</span>
+                </a></li>
+                <li><a href="#data-retention" onclick="scrollToSection(event)">
+                    <span class="en">Data Retention</span>
+                    <span class="vi hidden">Lưu giữ dữ liệu</span>
+                </a></li>
+                <li><a href="#security" onclick="scrollToSection(event)">
+                    <span class="en">Security</span>
+                    <span class="vi hidden">Bảo mật</span>
+                </a></li>
+                <li><a href="#user-rights" onclick="scrollToSection(event)">
+                    <span class="en">Your Privacy Rights</span>
+                    <span class="vi hidden">Quyền bảo mật</span>
+                </a></li>
+                <li><a href="#third-party" onclick="scrollToSection(event)">
+                    <span class="en">Third-Party Links</span>
+                    <span class="vi hidden">Liên kết bên thứ ba</span>
+                </a></li>
+                <li><a href="#changes" onclick="scrollToSection(event)">
+                    <span class="en">Changes to Policy</span>
+                    <span class="vi hidden">Thay đổi chính sách</span>
+                </a></li>
+                <li><a href="#contact" onclick="scrollToSection(event)">
+                    <span class="en">Contact Me</span>
+                    <span class="vi hidden">Liên hệ</span>
+                </a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="last-updated">
+                <span class="en">Last updated: January 27, 2026</span>
+                <span class="vi hidden">Cập nhật lần cuối: 27 tháng 1, 2026</span>
+            </div>
+
+            <h1>
+                <span class="en">Privacy Policy</span>
+                <span class="vi hidden">Chính sách Bảo mật</span>
+            </h1>
+
+            <section id="introduction">
+                <h2>
+                    <span class="en">Introduction</span>
+                    <span class="vi hidden">Giới thiệu</span>
+                </h2>
+                <p class="en">This Privacy Policy describes how I collect, use, and manage your information when you use the Hi Piano application. I'm an independent developer and take your privacy seriously.</p>
+                <p class="en">Hi Piano is a <strong>local application</strong> that runs entirely on your device. I do not store, process, or transmit any of your personal data to external servers. Your information remains on your device at all times.</p>
+                <p class="en">By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+                
+                <p class="vi hidden">Chính sách Bảo mật này mô tả cách tôi thu thập, sử dụng và quản lý thông tin của bạn khi sử dụng ứng dụng Hi Piano. Tôi là một nhà phát triển độc lập và đánh giá cao quyền riêng tư của bạn.</p>
+                <p class="vi hidden">Hi Piano là một <strong>ứng dụng local</strong> chạy hoàn toàn trên thiết bị của bạn. Tôi không lưu trữ, xử lý hoặc truyền bất kỳ dữ liệu cá nhân nào của bạn đến máy chủ bên ngoài. Thông tin của bạn luôn ở lại trên thiết bị của bạn.</p>
+                <p class="vi hidden">Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng Thông tin phù hợp với Chính sách Bảo mật này.</p>
+
+                <div class="highlight-box">
+                    <strong class="en">🔒 Key Privacy Points:</strong>
+                    <strong class="vi hidden">🔒 Các điểm bảo mật chính:</strong>
+                    <ul>
+                        <li class="en">✓ No server-side data storage</li>
+                        <li class="en">✓ No user accounts created</li>
+                        <li class="en">✓ All processing happens on your device</li>
+                        <li class="en">✓ No personal data collection beyond analytics</li>
+                        <li class="vi hidden">✓ Không lưu trữ dữ liệu trên máy chủ</li>
+                        <li class="vi hidden">✓ Không tạo tài khoản người dùng</li>
+                        <li class="vi hidden">✓ Tất cả xử lý diễn ra trên thiết bị của bạn</li>
+                        <li class="vi hidden">✓ Không thu thập dữ liệu cá nhân ngoài phân tích</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="definitions">
+                <h2>
+                    <span class="en">Definitions</span>
+                    <span class="vi hidden">Định nghĩa</span>
+                </h2>
+                <p class="en">The following terms have the meanings defined below:</p>
+                <p class="vi hidden">Các thuật ngữ sau đây có ý nghĩa được xác định bên dưới:</p>
+
+                <div class="definition">
+                    <strong class="en">Application:</strong>
+                    <strong class="vi hidden">Ứng dụng:</strong>
+                    <span class="en">Refers to Hi Piano, the software program provided by the Developer.</span>
+                    <span class="vi hidden">Dùng để chỉ Hi Piano, chương trình phần mềm được cung cấp bởi Nhà phát triển.</span>
+                </div>
+
+                <div class="definition">
+                    <strong class="en">Developer:</strong>
+                    <strong class="vi hidden">Nhà phát triển:</strong>
+                    <span class="en">(referred to as "I", "Me", "My" or "Developer" in this Privacy Policy) refers to the individual developer of Hi Piano.</span>
+                    <span class="vi hidden">(được gọi là "Tôi", "Tôi của", hoặc "Nhà phát triển" trong Chính sách Bảo mật này) dùng để chỉ nhà phát triển độc lập của Hi Piano.</span>
+                </div>
+
+                <div class="definition">
+                    <strong class="en">Device:</strong>
+                    <strong class="vi hidden">Thiết bị:</strong>
+                    <span class="en">Any device that can access the Service such as a smartphone, tablet, or computer.</span>
+                    <span class="vi hidden">Bất kỳ thiết bị nào có thể truy cập Dịch vụ như điện thoại thông minh, máy tính bảng hoặc máy tính.</span>
+                </div>
+
+                <div class="definition">
+                    <strong class="en">Service:</strong>
+                    <strong class="vi hidden">Dịch vụ:</strong>
+                    <span class="en">Refers to the Hi Piano Application and all related services provided.</span>
+                    <span class="vi hidden">Dùng để chỉ Ứng dụng Hi Piano và tất cả các dịch vụ liên quan được cung cấp.</span>
+                </div>
+
+                <div class="definition">
+                    <strong class="en">Usage Data:</strong>
+                    <strong class="vi hidden">Dữ liệu Sử dụng:</strong>
+                    <span class="en">Data collected automatically through Google Analytics about how you interact with the Service.</span>
+                    <span class="vi hidden">Dữ liệu được thu thập tự động thông qua Google Analytics về cách bạn tương tác với Dịch vụ.</span>
+                </div>
+
+                <div class="definition">
+                    <strong class="en">You:</strong>
+                    <strong class="vi hidden">Bạn:</strong>
+                    <span class="en">The individual accessing or using the Service.</span>
+                    <span class="vi hidden">Cá nhân truy cập hoặc sử dụng Dịch vụ.</span>
+                </div>
+            </section>
+
+            <section id="data-collection">
+                <h2>
+                    <span class="en">Collection of Data</span>
+                    <span class="vi hidden">Thu thập dữ liệu</span>
+                </h2>
+
+                <h3 class="en">Local Data - On Your Device Only</h3>
+                <h3 class="vi hidden">Dữ liệu Địa phương - Chỉ trên thiết bị của bạn</h3>
+                <p class="en">Hi Piano is designed to work completely offline. All your data, preferences, and files remain stored only on your device. I have no access to any of this information.</p>
+                <p class="vi hidden">Hi Piano được thiết kế để hoạt động hoàn toàn offline. Tất cả dữ liệu, tùy chọn và tệp của bạn được lưu trữ chỉ trên thiết bị của bạn. Tôi không có quyền truy cập vào bất kỳ thông tin nào.</p>
+
+                <h3 class="en">Google Analytics</h3>
+                <h3 class="vi hidden">Google Analytics</h3>
+                <p class="en">I use Google Analytics to understand how you use the Hi Piano application and to improve the user experience. This is the <strong>only external data collection</strong> that occurs. Google Analytics collects the following <strong>non-personal information</strong>:</p>
+                <p class="vi hidden">Tôi sử dụng Google Analytics để hiểu cách bạn sử dụng ứng dụng Hi Piano và cải thiện trải nghiệm người dùng. Đây là <strong>lần duy nhất</strong> thu thập dữ liệu bên ngoài xảy ra. Google Analytics thu thập các thông tin <strong>không phải cá nhân</strong> sau:</p>
+                <ul>
+                    <li class="en">Pages and features you visit or use</li>
+                    <li class="en">Time spent on different sections of the app</li>
+                    <li class="en">Device type and operating system</li>
+                    <li class="en">Approximate location (country/region level)</li>
+                    <li class="en">Browser type and language settings</li>
+                    <li class="vi hidden">Các trang và tính năng bạn truy cập hoặc sử dụng</li>
+                    <li class="vi hidden">Thời gian dành trên các phần khác nhau của ứng dụng</li>
+                    <li class="vi hidden">Loại thiết bị và hệ điều hành</li>
+                    <li class="vi hidden">Vị trí xấp xỉ (cấp độ quốc gia/khu vực)</li>
+                    <li class="vi hidden">Loại trình duyệt và cài đặt ngôn ngữ</li>
+                </ul>
+
+                <h3 class="en">How Google Analytics Works</h3>
+                <h3 class="vi hidden">Cách Google Analytics hoạt động</h3>
+                <p class="en">Google Analytics uses cookies and similar technologies to track your usage. This data is processed by Google according to their own privacy policy. <strong>I do not collect personally identifiable information (PII)</strong> through Google Analytics. All data sent to Google is anonymized and aggregated.</p>
+                <p class="vi hidden">Google Analytics sử dụng cookie và các công nghệ tương tự để theo dõi mức sử dụng của bạn. Dữ liệu này được Google xử lý theo chính sách bảo mật của họ. <strong>Tôi không thu thập thông tin nhận dạng cá nhân (PII)</strong> thông qua Google Analytics. Tất cả dữ liệu được gửi đến Google đều được ẩn danh và tổng hợp.</p>
+
+                <div class="highlight-box">
+                    <strong class="en">⚠️ Important:</strong>
+                    <strong class="vi hidden">⚠️ Quan trọng:</strong>
+                    <p class="en">I do <strong>NOT</strong> collect: emails, phone numbers, names, passwords, account information, or any personal identifiers. Only anonymized usage analytics from Google Analytics.</p>
+                    <p class="vi hidden">Tôi <strong>KHÔNG</strong> thu thập: email, số điện thoại, tên, mật khẩu, thông tin tài khoản hoặc bất kỳ định danh nào. Chỉ có dữ liệu phân tích sử dụng ẩn danh từ Google Analytics.</p>
+                </div>
+            </section>
+
+            <section id="data-use">
+                <h2>
+                    <span class="en">Use of Your Data</span>
+                    <span class="vi hidden">Sử dụng Dữ liệu của Bạn</span>
+                </h2>
+                <p class="en">The data collected is used for the following purposes:</p>
+                <p class="vi hidden">Dữ liệu thu thập được sử dụng cho các mục đích sau:</p>
+
+                <h3 class="en">To Improve the Application</h3>
+                <h3 class="vi hidden">Để cải thiện Ứng dụng</h3>
+                <p class="en">I use Google Analytics data to understand which features are most popular, where users spend the most time, and how to make the app better. This helps me prioritize improvements and fixes.</p>
+                <p class="vi hidden">Tôi sử dụng dữ liệu Google Analytics để hiểu tính năng nào phổ biến nhất, người dùng dành bao nhiêu thời gian ở đâu và cách cải thiện ứng dụng. Điều này giúp tôi ưu tiên cải tiến và sửa chữa.</p>
+
+                <h3 class="en">To Ensure Quality Service</h3>
+                <h3 class="vi hidden">Để đảm bảo Dịch vụ chất lượng</h3>
+                <p class="en">Analytics data helps me monitor app performance across different devices and regions, ensuring Hi Piano works well for everyone.</p>
+                <p class="vi hidden">Dữ liệu phân tích giúp tôi theo dõi hiệu suất ứng dụng trên các thiết bị và khu vực khác nhau, đảm bảo Hi Piano hoạt động tốt cho mọi người.</p>
+
+                <h3 class="en">For Legal Compliance</h3>
+                <h3 class="vi hidden">Để Tuân thủ Pháp luật</h3>
+                <p class="en">If required by law or regulation, I may use anonymized data to respond to valid requests from authorities.</p>
+                <p class="vi hidden">Nếu được yêu cầu bởi luật pháp hoặc quy định, tôi có thể sử dụng dữ liệu ẩn danh để phản hồi các yêu cầu hợp lệ từ các cơ quan.</p>
+            </section>
+
+            <section id="data-retention">
+                <h2>
+                    <span class="en">Data Retention</span>
+                    <span class="vi hidden">Lưu giữ dữ liệu</span>
+                </h2>
+
+                <h3 class="en">Local Data</h3>
+                <h3 class="vi hidden">Dữ liệu Địa phương</h3>
+                <p class="en">All data stored on your device is under your complete control. You can delete any data at any time by uninstalling the app or clearing app data from your device settings.</p>
+                <p class="vi hidden">Tất cả dữ liệu được lưu trữ trên thiết bị của bạn hoàn toàn dưới sự kiểm soát của bạn. Bạn có thể xóa bất kỳ dữ liệu nào bất kỳ lúc nào bằng cách gỡ cài đặt ứng dụng hoặc xóa dữ liệu ứng dụng từ cài đặt thiết bị của bạn.</p>
+
+                <h3 class="en">Google Analytics Data Retention</h3>
+                <h3 class="vi hidden">Lưu giữ Dữ liệu Google Analytics</h3>
+                <ul>
+                    <li class="en"><strong>Analytics Data:</strong> Google Analytics retains data according to their retention settings. By default, user activity data is retained for 14 months.</li>
+                    <li class="en"><strong>No Personal Data Stored:</strong> I do not store or retain any personally identifiable information. I only have access to anonymized, aggregated data through Google Analytics.</li>
+                    <li class="vi hidden"><strong>Dữ liệu Phân tích:</strong> Google Analytics lưu giữ dữ liệu theo cài đặt lưu giữ của họ. Theo mặc định, dữ liệu hoạt động người dùng được lưu giữ trong 14 tháng.</li>
+                    <li class="vi hidden"><strong>Không Lưu trữ Dữ liệu Cá nhân:</strong> Tôi không lưu trữ hoặc giữ lại bất kỳ thông tin nhận dạng cá nhân nào. Tôi chỉ có quyền truy cập vào dữ liệu ẩn danh và tổng hợp thông qua Google Analytics.</li>
+                </ul>
+
+                <p class="en">For more information about how Google Analytics handles data retention and privacy, please visit their privacy policy at <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</p>
+                <p class="vi hidden">Để biết thêm thông tin về cách Google Analytics xử lý lưu giữ dữ liệu và quyền riêng tư, vui lòng truy cập chính sách bảo mật của họ tại <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</p>
+            </section>
+
+            <section id="security">
+                <h2>
+                    <span class="en">Security of Your Data</span>
+                    <span class="vi hidden">Bảo mật Dữ liệu của Bạn</span>
+                </h2>
+                <p class="en">Hi Piano processes all data on your device, which means your information is protected by your device's own security measures (device lock, encryption, etc.). Since I do not have access to your local data, there is no risk of data breach on my servers.</p>
+                <p class="vi hidden">Hi Piano xử lý tất cả dữ liệu trên thiết bị của bạn, điều này có nghĩa thông tin của bạn được bảo vệ bởi các biện pháp bảo mật của riêng thiết bị (khóa thiết bị, mã hóa, v.v.). Vì tôi không có quyền truy cập vào dữ liệu địa phương của bạn, không có rủi ro vi phạm dữ liệu trên máy chủ của tôi.</p>
+                <p class="en">Google Analytics data is transmitted securely using encryption. For more details, see Google's security documentation.</p>
+                <p class="vi hidden">Dữ liệu Google Analytics được truyền một cách an toàn bằng mã hóa. Để biết thêm chi tiết, hãy xem tài liệu bảo mật của Google.</p>
+            </section>
+
+            <section id="user-rights">
+                <h2>
+                    <span class="en">Your Privacy Rights</span>
+                    <span class="vi hidden">Quyền Bảo mật của Bạn</span>
+                </h2>
+
+                <h3 class="en">Right to Access & Control</h3>
+                <h3 class="vi hidden">Quyền Truy cập & Kiểm soát</h3>
+                <p class="en">You have full control over all data stored on your device. You can access, modify, or delete any data at any time through your device's file manager or app settings.</p>
+                <p class="vi hidden">Bạn có toàn quyền kiểm soát tất cả dữ liệu được lưu trữ trên thiết bị của bạn. Bạn có thể truy cập, sửa đổi hoặc xóa bất kỳ dữ liệu nào bất kỳ lúc nào thông qua trình quản lý tệp thiết bị hoặc cài đặt ứng dụng của bạn.</p>
+
+                <h3 class="en">Right to Opt-Out of Analytics</h3>
+                <h3 class="vi hidden">Quyền Từ chối Phân tích</h3>
+                <p class="en">You can opt-out of Google Analytics tracking through your device settings or by adjusting privacy settings in your browser. You can also disable analytics in Hi Piano's settings if this option is provided.</p>
+                <p class="vi hidden">Bạn có thể từ chối theo dõi Google Analytics thông qua cài đặt thiết bị hoặc bằng cách điều chỉnh cài đặt quyền riêng tư trong trình duyệt của bạn. Bạn cũng có thể tắt phân tích trong cài đặt Hi Piano nếu tùy chọn này được cung cấp.</p>
+
+                <h3 class="en">Right to Deletion</h3>
+                <h3 class="vi hidden">Quyền Xóa</h3>
+                <p class="en">You can delete all app data at any time by uninstalling Hi Piano or clearing app cache/data from your device settings. Once deleted, the data cannot be recovered.</p>
+                <p class="vi hidden">Bạn có thể xóa tất cả dữ liệu ứng dụng bất kỳ lúc nào bằng cách gỡ cài đặt Hi Piano hoặc xóa bộ nhớ cache/dữ liệu ứng dụng từ cài đặt thiết bị. Sau khi xóa, dữ liệu không thể được khôi phục.</p>
+            </section>
+
+            <section id="third-party">
+                <h2>
+                    <span class="en">Third-Party Links</span>
+                    <span class="vi hidden">Liên kết Bên thứ ba</span>
+                </h2>
+                <p class="en">Hi Piano may contain links to other websites or applications that are not operated by me. If you click on a third party link, you will be directed to that third party's site. I strongly advise you to review the Privacy Policy of every site you visit.</p>
+                <p class="vi hidden">Hi Piano có thể chứa các liên kết đến các trang web hoặc ứng dụng khác không được tôi vận hành. Nếu bạn nhấp vào liên kết của bên thứ ba, bạn sẽ được chuyển hướng đến trang của bên thứ ba đó. Tôi khuyên bạn nên xem lại Chính sách Bảo mật của mọi trang web bạn truy cập.</p>
+                <p class="en">I have no control over and assume no responsibility for the content, privacy policies, or practices of any third party sites or services.</p>
+                <p class="vi hidden">Tôi không có quyền kiểm soát và không chịu trách nhiệm về nội dung, chính sách bảo mật hoặc thực tiễn của bất kỳ trang web hoặc dịch vụ bên thứ ba nào.</p>
+            </section>
+
+            <section id="changes">
+                <h2>
+                    <span class="en">Changes to This Privacy Policy</span>
+                    <span class="vi hidden">Thay đổi Chính sách Bảo mật này</span>
+                </h2>
+                <p class="en">I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.</p>
+                <p class="vi hidden">Tôi có thể cập nhật Chính sách Bảo mật này từ thời gian này sang thời gian khác. Tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách Bảo mật mới trên trang này và cập nhật ngày "Cập nhật lần cuối" ở đầu Chính sách Bảo mật này.</p>
+                <p class="en">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                <p class="vi hidden">Bạn nên xem lại Chính sách Bảo mật này định kỳ để xem các thay đổi. Những thay đổi đối với Chính sách Bảo mật này có hiệu lực khi chúng được đăng trên trang này.</p>
+            </section>
+
+            <section id="contact">
+                <h2>
+                    <span class="en">Contact Me</span>
+                    <span class="vi hidden">Liên hệ</span>
+                </h2>
+                <p class="en">If you have any questions or concerns about this Privacy Policy, please feel free to contact me:</p>
+                <p class="vi hidden">Nếu bạn có bất kỳ câu hỏi hoặc lo lắng nào về Chính sách Bảo mật này, vui lòng liên hệ với tôi:</p>
+                <ul>
+                    <li class="en">Email: <strong>hieunguyenute2@gmail.com</strong></li>
+                    <li class="vi hidden">Email: <strong>hieunguyenute2@gmail.com</strong></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Toggle visibility
+            if (lang === 'en') {
+                document.querySelectorAll('.en').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                document.querySelectorAll('.vi').forEach(el => {
+                    el.classList.add('hidden');
+                });
+            } else if (lang === 'vi') {
+                document.querySelectorAll('.en').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                document.querySelectorAll('.vi').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+            }
+        }
+
+        function scrollToSection(e) {
+            e.preventDefault();
+            const href = e.currentTarget.getAttribute('href');
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Set initial language
+        document.querySelectorAll('.vi').forEach(el => {
+            el.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
